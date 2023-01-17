@@ -23,3 +23,14 @@ Learn how to perform object measurement using OpenCV and Python. We will use an 
 
 * If the script runs successfully, it should execute as intended.
 
+
+### Note
+
+* requirements.txt file is a simple text file that lists all of the packages that your script depends on, along with their versions.
+
+
+* Using a virtual environment is a good practice to avoid conflicts with other python packages on your system.
+
+
+* You can create virtual environment and install packages by running python -m venv env and then source env/bin/activate for Linux and Mac or env\Scripts\activate for Windows and then pip install -r requirements.txt
+
