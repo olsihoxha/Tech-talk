@@ -14,11 +14,11 @@ hP = 297 * scale
 ###################################
 
 while True:
-    img = cv2.imread(path)
-    # if webcam:
-    #     success, img = cap.read()
-    # else:
-    #     img = cv2.imread(path)
+    # img = cv2.imread(path)
+    if webcam:
+        success, img = cap.read()
+    else:
+        img = cv2.imread(path)
 
     imgContours, conts = utlis.getContours(img, minArea=50000, filter=4)
     if len(conts) != 0:
@@ -45,7 +45,7 @@ while True:
                             (255, 0, 255), 2)
                 cv2.putText(imgContours2, '{}cm'.format(nH), (x - 70, y + h // 2), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1.5,
                             (255, 0, 255), 2)
-        cv2.imshow('A3', imgContours2)
+        cv2.imshow('A4', imgContours2)
 
     img = cv2.resize(img, (0, 0), None, 0.5, 0.5)
     cv2.imshow('Original', img)
